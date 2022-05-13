@@ -1,0 +1,32 @@
+body {
+    background-image: url("Salt-Lake-City-Utah.jpg");
+    background-size: 100% 100%;
+}
+
+div {
+    background-color: white;
+    opacity: 0.5;
+    overflow: auto;
+    max-width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1em;
+    font-family: "Archivo", sans-serif;
+    margin: auto;
+}
+
+#send-message {
+    border: 1px solid black;
+    width: 800px;
+    height: 100px;
+    margin-left: 310px;
+    margin-right: 315px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    
+}

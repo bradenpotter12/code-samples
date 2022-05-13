@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Socket testing - Client</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+</head>
+<body>
+<h1>TEST WEBSITE</h1>
+<div id="container"></div>
+<script type="text/javascript">
+
+    let socket = new WebSocket("ws://" + location.host);
+
+    window.onload = function(){
+
+        socket.onopen = function () {
+            console.log('Connection is open ...');
+            socket.send("join room");
+            socket.send("hello");
+            socket.send("hello again");
+        }
+
+        socket.onmessage = function (event) {
+            let message = event.data;
+            console.log(message);
+        }
+
+        socket.onerror = function () {
+            console.log("An error occurred")
+        }
+    }
+
+</script>
+</body>
+</html>
